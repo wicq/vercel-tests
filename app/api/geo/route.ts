@@ -1,5 +1,7 @@
 import { geolocation } from '@vercel/functions';
 
+export const runtime = 'edge';
+
 export function GET(request: Request) {
   const { city, country, countryRegion, latitude, longitude, region } = geolocation(request);
   
